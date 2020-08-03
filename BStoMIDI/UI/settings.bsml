@@ -14,7 +14,7 @@
     </vertical>
   </modal>
   <settings-container>
-    <bool-setting text='LightOut' value='boolEnable'></bool-setting>
+    <bool-setting text='BStoMidi' value='boolEnable'></bool-setting>
     <dropdown-list-setting text='Port' value='list-choice' choices='list-options' />
     <dropdown-list-setting text='Baudrate' value='baud-choice' choices='baud-options' />
     <bool-setting text='Rainbow Mode' value='rainbowMode'></bool-setting>

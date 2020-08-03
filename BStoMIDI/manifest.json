@@ -5,15 +5,15 @@
   ],
   "gameVersion": "1.8.0",
   "id": null,
-  "name": "LightToSerialRelight",
+  "name": "BStoMIDI",
   "version": "1.8.1",
   "features": [
   ],
   "links": {
-    "project-home": "https://github.com/MyLegIsPotato/LightToSerialRelight",
-    "project-source": "https://github.com/MyLegIsPotato/LightToSerialRelight",
+    "project-home": "https://github.com/MyLegIsPotato/BStoMIDI",
+    "project-source": "https://github.com/MyLegIsPotato/BStoMIDI",
   },
   "misc": {
-  "plugin-hint": "LightOut.Plugin"
+  "plugin-hint": "BStoMidi.Plugin"
   }
 }

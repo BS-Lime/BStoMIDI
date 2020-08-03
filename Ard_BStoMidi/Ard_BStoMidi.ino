@@ -2,6 +2,7 @@
 int col = 0; //0 is blue
 int prevcol = 0;
 char notebuffer[2];
+char input[2];
 byte note;
 
 void setup() {
@@ -11,7 +12,6 @@ void setup() {
 void loop() {
 	if (Serial.available())
 	{
-		char input[2];
 		Serial.readBytesUntil('\n', input, 2);
 		notebuffer[1] = input[1];
 		switch (input[0])

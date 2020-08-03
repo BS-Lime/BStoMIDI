@@ -1,4 +1,4 @@
-﻿namespace LightOut
+﻿namespace BStoMidi
 {
     public enum LightState
     {

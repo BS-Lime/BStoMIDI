@@ -4,7 +4,7 @@ using System.IO.Ports;
 using System.Linq;
 using UnityEngine;
 
-namespace LightOut
+namespace BStoMidi
 {
     public class EventListener : MonoBehaviour
     {

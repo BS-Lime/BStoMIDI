@@ -41,3 +41,12 @@ The Lightstates are as followed:
 I.e. if the left laser turns on you'll get a Note-On flollowed by an immediate Note-Off on note 52.
 
 Strobe is handled by the game with rapid turning on and off.
+
+The Events are
+
+```
+        40 Song started
+        41 Song finished
+        42 Song paused
+        43 Sone unpaused
+```

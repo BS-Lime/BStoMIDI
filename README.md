@@ -1,6 +1,8 @@
 # BStoMidi
 
-This thing allows you to control lighting control software through Midi.
+This thing allows you to control lighting control software through an external device over Midi.
+
+Doing so removes the need for loopback software.
 
 It is heavily based on [LightToSerialRelight](https://github.com/MyLegIsPotato/LightToSerialRelight) by [MyLegIsPotato](https://github.com/MyLegIsPotato)
 

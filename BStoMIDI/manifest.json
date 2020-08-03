@@ -1,18 +1,19 @@
 ﻿{
-  "author": "BS-Lime",
-  "description": ["Arduino MIDI event-based controller"],
+  "author": "Mylegispotato",
+  "description": [
+    "Arduino LED event-based controller"
+  ],
   "gameVersion": "1.8.0",
   "id": null,
-  "name": "BStoMIDI",
-  "version": "1.0.0",
-  "features": [],
-  "links": 
-  {
-    "project-home": "https://github.com/BS-Lime/BStoMIDI",
-    "project-source": "https://github.com/BS-Lime/BStoMIDI"
+  "name": "LightToSerialRelight",
+  "version": "1.8.1",
+  "features": [
+  ],
+  "links": {
+    "project-home": "https://github.com/MyLegIsPotato/LightToSerialRelight",
+    "project-source": "https://github.com/MyLegIsPotato/LightToSerialRelight",
   },
-  "misc": 
-  {
-    "plugin-hint": "BStoMIDI.Plugin"
+  "misc": {
+  "plugin-hint": "LightOut.Plugin"
   }
 }

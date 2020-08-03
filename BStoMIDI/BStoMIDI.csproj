@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BStoMIDI</RootNamespace>
-    <AssemblyName>BStoMIDI</AssemblyName>
+    <AssemblyName>LightToSerialRelight</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -113,5 +113,4 @@
     <PostBuildEvent>
     </PostBuildEvent>
   </PropertyGroup>
-  <ProjectExtensions />
 </Project>

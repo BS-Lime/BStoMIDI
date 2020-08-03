@@ -4,12 +4,12 @@ using IPA;
 using System;
 using UnityEngine;
 
-namespace BStoMIDI
+namespace LightOut
 {
     [Plugin(RuntimeOptions.DynamicInit)]
     public class Plugin
     {
-        public string Name => "BStoMIDI";
+        public string Name => "LightToSerialRelight";
         public string Version => "1.8.1";
 
         internal static bool gameCoreJustLoaded = false;
@@ -21,16 +21,16 @@ namespace BStoMIDI
         public Plugin(IPA.Logging.Logger logger)
         {
             log = logger;
-            log.Info("Initialized BStoMIDI");
+            log.Info("Initialized LightToSerialRelight");
             thisPlugin = this;
         }
 
         [OnStart]
         public void OnStart()
         {
-            log.Info("Starting BStoMIDI");
+            log.Info("Starting LightToSerialRelight");
             BSEvents.menuSceneLoaded += BSEvents_menuSceneLoaded;
-            BSMLSettings.instance.AddSettingsMenu("BStoMIDI", "BStoMIDI.UI.settings.bsml", Settings.instance);
+            BSMLSettings.instance.AddSettingsMenu("LightOut", "LightOut.UI.settings.bsml", Settings.instance);
             Settings.instance.UpdateConnection();
         }
 

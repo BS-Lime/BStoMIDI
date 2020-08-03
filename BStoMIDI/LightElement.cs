@@ -1,4 +1,4 @@
-﻿namespace BStoMIDI
+﻿namespace BStoMidi
 {
     public enum LightElement
     {

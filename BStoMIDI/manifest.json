@@ -5,13 +5,13 @@
   ],
   "gameVersion": "1.8.0",
   "id": null,
-  "name": "BStoMIDI",
+  "name": "BStoMidi",
   "version": "1.8.1",
   "features": [
   ],
   "links": {
-    "project-home": "https://github.com/MyLegIsPotato/BStoMIDI",
-    "project-source": "https://github.com/MyLegIsPotato/BStoMIDI",
+    "project-home": "https://github.com/MyLegIsPotato/BStoMidi",
+    "project-source": "https://github.com/MyLegIsPotato/BStoMidi",
   },
   "misc": {
   "plugin-hint": "BStoMidi.Plugin"

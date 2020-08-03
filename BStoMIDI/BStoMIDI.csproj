@@ -7,8 +7,8 @@
     <ProjectGuid>{BA16D1B1-D68F-4E53-8EFC-6D9364960789}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BStoMIDI</RootNamespace>
-    <AssemblyName>BStoMIDI</AssemblyName>
+    <RootNamespace>BStoMidi</RootNamespace>
+    <AssemblyName>BStoMidi</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -109,6 +109,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterBuild">
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Plugins\" ContinueOnError="false" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(TargetPath)..\..\..\..\..\" ContinueOnError="false" />
   </Target>
   <PropertyGroup>
     <PostBuildEvent>

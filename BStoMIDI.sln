@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BStoMIDI", "BStoMIDI\BStoMIDI.csproj", "{BA16D1B1-D68F-4E53-8EFC-6D9364960789}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BStoMidi", "BStoMIDI\BStoMidi.csproj", "{BA16D1B1-D68F-4E53-8EFC-6D9364960789}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ard_BStoMidi", "Ard_BStoMidi\Ard_BStoMidi.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
 EndProject

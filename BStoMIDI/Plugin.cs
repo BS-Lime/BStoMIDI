@@ -9,7 +9,7 @@ namespace BStoMidi
     [Plugin(RuntimeOptions.DynamicInit)]
     public class Plugin
     {
-        public string Name => "BStoMIDI";
+        public string Name => "BStoMidi";
         public string Version => "1.8.1";
 
         internal static bool gameCoreJustLoaded = false;
@@ -21,14 +21,14 @@ namespace BStoMidi
         public Plugin(IPA.Logging.Logger logger)
         {
             log = logger;
-            log.Info("Initialized BStoMIDI");
+            log.Info("Initialized BStoMidi");
             thisPlugin = this;
         }
 
         [OnStart]
         public void OnStart()
         {
-            log.Info("Starting BStoMIDI");
+            log.Info("Starting BStoMidi");
             BSEvents.menuSceneLoaded += BSEvents_menuSceneLoaded;
             BSMLSettings.instance.AddSettingsMenu("BStoMidi", "BStoMidi.UI.settings.bsml", Settings.instance);
             Settings.instance.UpdateConnection();

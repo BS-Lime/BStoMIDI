@@ -1,5 +1,5 @@
 ﻿using BS_Utils.Utilities;
-using BStoMIDI;
+using BStoMidi;
 using System;
 using System.IO.Ports;
 using System.Linq;
@@ -56,7 +56,7 @@ namespace BStoMidi
                 Ec.beatmapEventDidTriggerEvent += EventHappened; //Flash on map's light events
             }
 
-            FI.songDidFinishEvent += OnSongDone;
+            BSEvents.menuSceneActive += menuSceneActive;
 
             C1 = Cm.ColorForNoteType(NoteType.NoteB);
             redLeft = Mathf.RoundToInt(C1.r * 255);
@@ -91,7 +91,7 @@ namespace BStoMidi
             Settings.arduinoPort.Write("E0");
         }
 
-        private void OnSongDone()
+        private void menuSceneActive()
         {
             Settings.arduinoPort.Write("E1");
         }
@@ -130,7 +130,7 @@ namespace BStoMidi
                         Plugin.log.Info("Event happened: " + value.ToString());
                         if (Settings.instance.rainbowMode)
                         {
-                            Settings.arduinoPort.Write("^^");
+                            Settings.arduinoPort.Write("E9");
                         }
                         if (Event == LightElement.LeftLasers.AsInt())
                         {
@@ -157,7 +157,7 @@ namespace BStoMidi
             Plugin.log.Notice("Note Cut Event!");
             if (Settings.instance.rainbowMode)
             {
-                Settings.arduinoPort.Write("^^");
+                Settings.arduinoPort.Write("E9");
             }
 
             if (info.saberType == SaberType.SaberA)
@@ -172,7 +172,7 @@ namespace BStoMidi
 
         private void StartRainbowMode(SerialPort port)
         {
-            Settings.arduinoPort.Write("^^"); //Starts rainbow mode
+            Settings.arduinoPort.Write("E9"); //Starts rainbow mode
         }
 
         private void SendColorToArduino(SerialPort port)

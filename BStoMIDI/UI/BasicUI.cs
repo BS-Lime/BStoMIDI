@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CustomUI.GameplaySettings;
 using CustomUI.Settings;
 
-namespace LightOut.UI
+namespace BStoMidi.UI
 {
     class BasicUI
     {

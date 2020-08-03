@@ -6,6 +6,7 @@
         RightTurnOn,
         RightFlashAndLeaveOn,
         RightFlashAndTurnOff,
+        TurnOff2,
         LeftTurnOn,
         LeftFlashAndLeaveOn,
         LeftFlashAndTurnOff

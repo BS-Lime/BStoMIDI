@@ -6,6 +6,8 @@ Doing so removes the need for loopback software.
 
 It is heavily based on [LightToSerialRelight](https://github.com/MyLegIsPotato/LightToSerialRelight) by [MyLegIsPotato](https://github.com/MyLegIsPotato)
 
+The Arduino part is written with Visual Micro. I recommend installing that if you want to edit the Arduino code but using the Arduino IDE works aswell.
+
 ## Getting Started
 
 ### Mod Install

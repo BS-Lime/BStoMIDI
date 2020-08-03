@@ -17,7 +17,7 @@ namespace BStoMidi
         public static Settings settings;
 
         [UIValue("boolEnable")]
-        public bool _isModEnabled
+        public bool IsModEnabled
         {
             get => config.GetBool("BStoMidi", "_isModEnabled", true, true);
             set => config.SetBool("BStoMidi", "_isModEnabled", value);
@@ -27,34 +27,34 @@ namespace BStoMidi
         private List<object> options = SerialPort.GetPortNames().ToList<object>();
 
         [UIValue("list-choice")]
-        public string listChoice
+        public string ListChoice
         {
-            get => config.GetString("BStoMidi", nameof(listChoice), "");
-            set => config.SetString("BStoMidi", nameof(listChoice), value);
+            get => config.GetString("BStoMidi", nameof(ListChoice), "");
+            set => config.SetString("BStoMidi", nameof(ListChoice), value);
         }
 
         [UIValue("baud-options")]
         private List<object> rates = new object[] { 1200, 2400, 4800, 9600, 19200, 38400, 57600, 74880, 115200, 230400, 250000, 500000, 1000000 }.ToList<object>();
 
         [UIValue("baud-choice")]
-        public int baudChoice
+        public int BaudChoice
         {
-            get => config.GetInt("BStoMidi", nameof(baudChoice), 115200);
-            set => config.SetInt("BStoMidi", nameof(baudChoice), value);
+            get => config.GetInt("BStoMidi", nameof(BaudChoice), 115200);
+            set => config.SetInt("BStoMidi", nameof(BaudChoice), value);
         }
 
         [UIValue("event-options")]
         private List<object> events = new object[] { "noteCuts", "lightEvents" }.ToList<object>();
 
         [UIValue("event-choice")]
-        public string eventChoice
+        public string EventChoice
         {
             get => config.GetString("BStoMidi", "eventChoice", "");
             set => config.SetString("BStoMidi", "eventChoice", value);
         }
 
         [UIValue("rainbowMode")]
-        public bool rainbowMode
+        public bool RainbowMode
         {
             get => config.GetBool("BStoMidi", "rainbowMode", false, true);
             set => config.SetBool("BStoMidi", "rainbowMode", value);
@@ -63,7 +63,7 @@ namespace BStoMidi
         [UIAction("#apply")]
         public void UpdateConnection()
         {
-            if (_isModEnabled)
+            if (IsModEnabled)
             {
                 OpenConnection();
             }
@@ -90,7 +90,7 @@ namespace BStoMidi
             }
             else
             {
-                arduinoPort = new SerialPort(listChoice, baudChoice, Parity.None, 8);
+                arduinoPort = new SerialPort(ListChoice, BaudChoice, Parity.None, 8);
                 StartCoroutine(Connect());
             }
         }

@@ -14,7 +14,6 @@ namespace BStoMidi
         private BeatmapObjectCallbackController Ec;
         private ColorManager Cm;
         private BeatmapLevelSO BMD;
-        private SongController FI;
         private BeatmapObjectManager _spawnController;
         private int BPM;
         private Color C1;
@@ -34,7 +33,7 @@ namespace BStoMidi
             _spawnController = FindObjectOfType<BeatmapObjectManager>();
 
             Plugin.log.Notice("Initializing..");
-            Plugin.log.Notice(Settings.instance.eventChoice);
+            Plugin.log.Notice(Settings.instance.EventChoice);
 
             BSEvents.gameSceneActive += OnGameSceneActive;
             BSEvents.songPaused += OnSongPaused;
@@ -43,14 +42,13 @@ namespace BStoMidi
             Ec = Resources.FindObjectsOfTypeAll<BeatmapObjectCallbackController>().FirstOrDefault();
             Cm = Resources.FindObjectsOfTypeAll<ColorManager>().LastOrDefault();
             BMD = Resources.FindObjectsOfTypeAll<BeatmapLevelSO>().FirstOrDefault();
-            FI = Resources.FindObjectsOfTypeAll<SongController>().FirstOrDefault();
-            if (Settings.instance.eventChoice == "noteCuts")
+            if (Settings.instance.EventChoice == "noteCuts")
             {
                 Plugin.log.Info("Adding event listner to noteCuts");
                 _spawnController.noteWasCutEvent += OnNoteCut;  //Flash on note cuts
             }
 
-            if (Settings.instance.eventChoice == "lightEvents")
+            if (Settings.instance.EventChoice == "lightEvents")
             {
                 Plugin.log.Info("Adding event listner to lightEvents");
                 Ec.beatmapEventDidTriggerEvent += EventHappened; //Flash on map's light events
@@ -73,7 +71,7 @@ namespace BStoMidi
 
             if (Settings.arduinoPort.IsOpen)
             {
-                if (Settings.instance.rainbowMode)
+                if (Settings.instance.RainbowMode)
                 {
                     StartRainbowMode(Settings.arduinoPort);
                 }
@@ -128,7 +126,7 @@ namespace BStoMidi
                     if (Data.time > (lastEventTime + (maxArduinoDelay * 0.001)))
                     {
                         Plugin.log.Info("Event happened: " + value.ToString());
-                        if (Settings.instance.rainbowMode)
+                        if (Settings.instance.RainbowMode)
                         {
                             Settings.arduinoPort.Write("E9");
                         }
@@ -155,7 +153,7 @@ namespace BStoMidi
             }
 
             Plugin.log.Notice("Note Cut Event!");
-            if (Settings.instance.rainbowMode)
+            if (Settings.instance.RainbowMode)
             {
                 Settings.arduinoPort.Write("E9");
             }

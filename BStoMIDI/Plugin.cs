@@ -37,13 +37,13 @@ namespace BStoMidi
         public void BSEvents_menuSceneLoaded()
         {
             log.Info("Loaded Menu");
-            if (Settings.instance._isModEnabled && Settings.arduinoPort.IsOpen && !eventAdded) //Only happens once per game restart if mod is always enabled.
+            if (Settings.instance.IsModEnabled && Settings.arduinoPort.IsOpen && !eventAdded) //Only happens once per game restart if mod is always enabled.
             {
                 log.Info("Adding event for gameSceneLoaded.  Level Event Listener will be spawned when starting a level.");
                 BSEvents.gameSceneLoaded += AddEventListener;
                 eventAdded = true;
             }
-            else if (eventAdded && (!Settings.instance._isModEnabled || !Settings.arduinoPort.IsOpen))
+            else if (eventAdded && (!Settings.instance.IsModEnabled || !Settings.arduinoPort.IsOpen))
             {
                 log.Info("Removing event for gameSceneLoaded. Level Event Listener won't be spawned anymore.");
                 BSEvents.gameSceneLoaded -= AddEventListener;

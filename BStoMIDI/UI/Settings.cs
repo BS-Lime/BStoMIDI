@@ -39,7 +39,7 @@ namespace BStoMidi
         [UIValue("baud-choice")]
         public int baudChoice
         {
-            get => config.GetInt("BStoMidi", nameof(baudChoice), 1200);
+            get => config.GetInt("BStoMidi", nameof(baudChoice), 115200);
             set => config.SetInt("BStoMidi", nameof(baudChoice), value);
         }
 
@@ -56,7 +56,7 @@ namespace BStoMidi
         [UIValue("rainbowMode")]
         public bool rainbowMode
         {
-            get => config.GetBool("BStoMidi", "rainbowMode", true, true);
+            get => config.GetBool("BStoMidi", "rainbowMode", false, true);
             set => config.SetBool("BStoMidi", "rainbowMode", value);
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BStoMIDI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,10 @@ namespace BStoMidi
         public static string AsNumberString(this LightState state)
         {
             return ((int)state).ToString();
+        }
+        public static int AsInt(this LightElement state)
+        {
+            return ((int)state);
         }
     }
 }

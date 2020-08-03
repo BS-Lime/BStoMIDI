@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="EventListener.cs" />
+    <Compile Include="LightElement.cs" />
     <Compile Include="LightStateExtensions.cs" />
     <Compile Include="LightState.cs" />
     <Compile Include="Plugin.cs" />

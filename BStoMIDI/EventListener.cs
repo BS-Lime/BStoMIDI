@@ -1,4 +1,5 @@
 ﻿using BS_Utils.Utilities;
+using BStoMIDI;
 using System;
 using System.IO.Ports;
 using System.Linq;
@@ -8,8 +9,6 @@ namespace BStoMidi
 {
     public class EventListener : MonoBehaviour
     {
-        private const int LeftLaser = 2;
-        private const int RightLaser = 3;
         private const float maxArduinoDelay = 5; //Time in miliseconds in which arduino goes through one read cycle. You can calculate your own time by
 
         private BeatmapObjectCallbackController Ec;
@@ -124,7 +123,7 @@ namespace BStoMidi
             Plugin.log.Info(Event + value.ToString());
             if (value < 2000000000)
             {
-                if (Event == LeftLaser || Event == RightLaser)
+                if (Event == LightElement.LeftLasers.AsInt() || Event == LightElement.RightLasers.AsInt())
                 {
                     if (Data.time > (lastEventTime + (maxArduinoDelay * 0.001)))
                     {
@@ -133,7 +132,7 @@ namespace BStoMidi
                         {
                             Settings.arduinoPort.Write("^^");
                         }
-                        if (Event == LeftLaser)
+                        if (Event == LightElement.LeftLasers.AsInt())
                         {
                             Settings.arduinoPort.Write($"A{value}");
                         }

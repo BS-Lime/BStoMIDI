@@ -1,4 +1,4 @@
-﻿namespace LightOut
+﻿namespace BStoMIDI
 {
     public enum LightState
     {

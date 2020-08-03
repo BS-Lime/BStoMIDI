@@ -42,7 +42,7 @@ The Lightstates are as Followed:
         8 LeftFlashAndTurnOff
 ```
 
-I.e. if the left laser turns on you'll get a Note-On followed by an immediate Note-Off on note 52.
+I.e. if the left laser turns on with whatever color is set for the right side you'll get a Note-On followed by an immediate Note-Off on note 52.
 
 While there is no dedicated command for a strobe effect it is implemented by rapidly turning the lights on and off.
 

@@ -10,8 +10,8 @@
   "features": [
   ],
   "links": {
-    "project-home": "https://github.com/MyLegIsPotato/BStoMidi",
-    "project-source": "https://github.com/MyLegIsPotato/BStoMidi",
+    "project-home": "https://github.com/BS-Lime/BStoMIDI",
+    "project-source": "https://github.com/BS-Lime/BStoMIDI"
   },
   "misc": {
   "plugin-hint": "BStoMidi.Plugin"

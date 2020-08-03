@@ -1,0 +1,19 @@
+﻿{
+  "author": "Mylegispotato",
+  "description": [
+    "Arduino LED event-based controller"
+  ],
+  "gameVersion": "1.8.0",
+  "id": null,
+  "name": "LightToSerialRelight",
+  "version": "1.8.1",
+  "features": [
+  ],
+  "links": {
+    "project-home": "https://github.com/MyLegIsPotato/LightToSerialRelight",
+    "project-source": "https://github.com/MyLegIsPotato/LightToSerialRelight",
+  },
+  "misc": {
+  "plugin-hint": "LightOut.Plugin"
+  }
+}

@@ -28,11 +28,11 @@ You'll get a Note On immediatly followed by a Note Off for each of those.
 The Lightstates are as followed:
 
 ```
-        1 TurnRightOff
+        1 TurnOff
         2 RightTurnOn
         3 RightFlashAndLeaveOn
         4 RightFlashAndTurnOff
-        5 TurnLeftOff
+        5 TurnOff2
         6 LeftTurnOn
         7 LeftFlashAndLeaveOn
         8 LeftFlashAndTurnOff

@@ -8,7 +8,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-namespace LightOut
+namespace BStoMIDI
 {
     class Settings : PersistentSingleton<Settings>
     {
@@ -19,8 +19,8 @@ namespace LightOut
         [UIValue("boolEnable")]
         public bool _isModEnabled
         {
-            get => config.GetBool("LightOut", "_isModEnabled", true, true);
-            set => config.SetBool("LightOut", "_isModEnabled", value);
+            get => config.GetBool("BStoMIDI", "_isModEnabled", true, true);
+            set => config.SetBool("BStoMIDI", "_isModEnabled", value);
         }
 
         [UIValue("list-options")]
@@ -29,8 +29,8 @@ namespace LightOut
         [UIValue("list-choice")]
         public string listChoice
         {
-            get => config.GetString("LightOut", nameof(listChoice), "");
-            set => config.SetString("LightOut", nameof(listChoice), value);
+            get => config.GetString("BStoMIDI", nameof(listChoice), "");
+            set => config.SetString("BStoMIDI", nameof(listChoice), value);
         }
 
         [UIValue("baud-options")]
@@ -39,8 +39,8 @@ namespace LightOut
         [UIValue("baud-choice")]
         public int baudChoice
         {
-            get => config.GetInt("LightOut", nameof(baudChoice), 1200);
-            set => config.SetInt("LightOut", nameof(baudChoice), value);
+            get => config.GetInt("BStoMIDI", nameof(baudChoice), 1200);
+            set => config.SetInt("BStoMIDI", nameof(baudChoice), value);
         }
 
         [UIValue("event-options")]
@@ -49,15 +49,15 @@ namespace LightOut
         [UIValue("event-choice")]
         public string eventChoice
         {
-            get => config.GetString("LightOut", "eventChoice", "");
-            set => config.SetString("LightOut", "eventChoice", value);
+            get => config.GetString("BStoMIDI", "eventChoice", "");
+            set => config.SetString("BStoMIDI", "eventChoice", value);
         }
 
         [UIValue("rainbowMode")]
         public bool rainbowMode
         {
-            get => config.GetBool("LightOut", "rainbowMode", true, true);
-            set => config.SetBool("LightOut", "rainbowMode", value);
+            get => config.GetBool("BStoMIDI", "rainbowMode", true, true);
+            set => config.SetBool("BStoMIDI", "rainbowMode", value);
         }
 
         [UIAction("#apply")]
@@ -155,7 +155,7 @@ namespace LightOut
 
         public void Awake()
         {
-            config = new Config("LightOut");
+            config = new Config("BStoMIDI");
         }
 
         public void CloseConnection()

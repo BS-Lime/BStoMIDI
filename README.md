@@ -46,7 +46,7 @@ The Events Are:
 
 ```
         40 Song started
-        41 Song finished
+        41 Song finished (going back to menu for any reason)
         42 Song paused
         43 Sone unpaused
         49 Any light event with rainbow mode enaboled

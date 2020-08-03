@@ -1,8 +1,12 @@
 # BStoMidi
 
-This thing allows you to control lighting control software through Midi.
+This thing allows you to control lighting control software through an external device over Midi.
+
+Doing so removes the need for loopback software.
 
 It is heavily based on [LightToSerialRelight](https://github.com/MyLegIsPotato/LightToSerialRelight) by [MyLegIsPotato](https://github.com/MyLegIsPotato)
+
+The Arduino part is written with Visual Micro. I recommend installing that if you want to edit the Arduino code but using the Arduino IDE works aswell.
 
 ## Getting Started
 
@@ -46,8 +50,8 @@ The Events Are:
 
 ```
         40 Song started
-        41 Song finished
+        41 Song finished (going back to menu for any reason)
         42 Song paused
         43 Sone unpaused
-        49 Any light event with rainbow mode enaboled
+        49 Any light event with rainbow mode enabeled
 ```

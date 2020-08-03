@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BStoMidi
 {
-    public static class LightStateExtensions
+    public static class LightStateHelpers
     {
         public static string AsNumberString(this LightState state)
         {

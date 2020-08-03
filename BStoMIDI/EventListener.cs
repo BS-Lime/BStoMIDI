@@ -172,7 +172,7 @@ namespace BStoMidi
 
         private void StartRainbowMode(SerialPort port)
         {
-            port.Write(new char[] { '^' }, 0, 1); //Starts rainbow mode
+            Settings.arduinoPort.Write("^^"); //Starts rainbow mode
         }
 
         private void SendColorToArduino(SerialPort port)

@@ -25,7 +25,7 @@ Flash the Arduino sketch onto the Arduino.
 
 ### The Light software
 
-Everything done on the left-hand side will get sent on notes 50-59, while the right-hand side will be sent on 60-69 (currently set to notes or the back lasers left and right or the last cut block depending on your setting in the ingame menu, nothing else), and other events come in on 40-49.
+Everything done on the left-hand side will get sent on notes 50-59, while the right-hand side will be sent on 60-69 (currently set to the back lasers left and right or the last cut block depending on your setting in the ingame menu, nothing else), and other events come in on 40-49.
 
 You'll get a Note-On immediately followed by a Note-Off for each of those.
 
